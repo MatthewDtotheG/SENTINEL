@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  browser: MyText
+  mobile: MyText
+  laptop: MyText
+  desktop: MyText
+  ip: MyText
+  isp: MyText
+  city: MyText
+  country_code: MyText
+  country_name: MyText
+  district: MyText
+  timezone_name: MyText
+  postal_code: MyText
+  currency_code: MyText
+  website_id: 1
+
+two:
+  browser: MyText
+  mobile: MyText
+  laptop: MyText
+  desktop: MyText
+  ip: MyText
+  isp: MyText
+  city: MyText
+  country_code: MyText
+  country_name: MyText
+  district: MyText
+  timezone_name: MyText
+  postal_code: MyText
+  currency_code: MyText
+  website_id: 1
