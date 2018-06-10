@@ -1,4 +1,3 @@
 class User < ApplicationRecord
-  has_many :websites
-  has_many :targets, through: :website
+  has_secure_password
 end

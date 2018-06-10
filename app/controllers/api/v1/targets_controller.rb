@@ -21,6 +21,6 @@ class Api::V1::TargetsController < ApplicationController
   private
   def target_params
     params.permit(:browser, :mobile, :laptop, :desktop, :ip,
-      :isp, :city, :country_code, :country_name, :district, :timezone_name, :currency_code)
+      :isp, :city, :country_code, :country_name, :district, :timezone_name, :postal_code, :currency_code, :website_id)
   end
 end
