@@ -5,7 +5,7 @@ class Api::V1::WebsitesController < ApplicationController
   end
 
   def create
-    website = Website.create(user_params)
+    website = Website.create(website_params)
     render json: website, status: 201
   end
 
