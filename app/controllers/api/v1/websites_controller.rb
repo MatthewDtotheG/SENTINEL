@@ -1,4 +1,5 @@
 class Api::V1::WebsitesController < ApplicationController
+
   def index
     websites = Website.all
     render json: websites, status: 200

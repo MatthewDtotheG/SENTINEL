@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         post '/login', to: 'auth#create'
         get '/current_user', to: 'auth#show'
         resources :websites
+        get '/targets/:id', to: 'targets#targetWebsites'
         resources :targets
     end
   end
