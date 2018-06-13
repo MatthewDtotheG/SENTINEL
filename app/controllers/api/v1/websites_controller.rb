@@ -1,4 +1,5 @@
 class Api::V1::WebsitesController < ApplicationController
+  before_action :set_website, only: [:show, :update, :websiteTargets]
 
   def index
     websites = Website.all
@@ -8,6 +9,11 @@ class Api::V1::WebsitesController < ApplicationController
   def create
     website = Website.create(website_params)
     render json: website, status: 201
+  end
+
+  def websiteTargets
+    targets = Target.where(website_id: params[:id])
+    render json: targets
   end
 
   def update
@@ -20,6 +26,11 @@ class Api::V1::WebsitesController < ApplicationController
   end
 
   private
+
+  def set_website
+    @website = Website.find(params[:id])
+  end
+
   def website_params
     params.permit(:name, :user_id)
   end
