@@ -12,9 +12,41 @@ class Api::V1::WebsitesController < ApplicationController
   end
 
   def websiteTargets
-    targets = Target.where(website_id: params[:id])
-    render json: targets
+    whatever = []
+    specific_targets = Target.where(website_id: params[:id])
+
+    deliverableHash = {
+      browser: {},
+      mobile: {},
+      laptop: {},
+      desktop: {},
+      isp: {},
+      city: {},
+      country_code: {},
+      country_name: {},
+      district: {},
+      timezone_name: {},
+      postal_code: {},
+      currency_code: {}
+    }
+
+  specific_targets.map do |target|
+    target.attributes.each do |key, value|
+      if deliverableHash.keys.include?(key.to_sym)
+        deliverableHash[key.to_sym][value] ||= 0
+        deliverableHash[key.to_sym][value] +=1
+      end
+    end
   end
+
+  deliverableHash[:website_id] = params[:id]
+  whatever.push(deliverableHash)
+
+  render json: whatever, status: 200
+end
+
+
+
 
   def update
     @website.update(website_params)
