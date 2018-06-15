@@ -8,30 +8,20 @@
 
 bob = User.create(first_name: 'Matt', last_name: 'Garrett', email: 'bob@gmail.com', password: '123', password_confirmation: '123')
 
-
-coolsite = Website.create(name: 'super cool website', user_id: bob.id)
-
-coolsite = Website.create(name: 'another site', user_id: bob.id)
-
-coolsite = Website.create(name: 'one more site', user_id: bob.id)
+coolsite = Website.create(name: 'CURSR CO', user_id: bob.id)
 
 
-Target.create(browser: 'chrome 66',
-  mobile: 'iphone', laptop: 'false', desktop: 'false', ip: "172.92.12.10",
-  isp: "verizon", city: "New York", country_code: "US", country_name: "United States",
+Target.create(browser: 'Chrome',
+  mobile: 'android', laptop: 'false', desktop: 'false', ip: "172.92.12.10",
+  isp: "Verizon Communications", city: "New York", country_code: "US", country_name: "United States",
   district: "New York", timezone_name: "America/New_York", postal_code: "65622", currency_code: "USD", website_id: 1)
 
-Target.create(browser: 'chrome 66',
-  mobile: 'iphone', laptop: 'false', desktop: 'false', ip: "172.92.12.10",
-  isp: "verizon", city: "New York", country_code: "US", country_name: "United States",
-  district: "New York", timezone_name: "America/New_York", postal_code: "65622", currency_code: "USD", website_id: 1)
+Target.create(browser: 'Chrome',
+    mobile: 'null', laptop: 'true', desktop: 'false', ip: "172.92.12.10",
+    isp: "Verizon Communications", city: "Dover", country_code: "UK", country_name: "United Kingdom",
+    district: "Dover", timezone_name: "United Kingdom", postal_code: "65622", currency_code: "GBP", website_id: 1)
 
-Target.create(browser: 'chrome 66',
-    mobile: 'iphone', laptop: 'true', desktop: 'false', ip: "172.92.12.10",
-    isp: "verizon", city: "London", country_code: "UK", country_name: "United Kingdom",
-    district: "New York", timezone_name: "America/New_York", postal_code: "65622", currency_code: "GBP", website_id: 1)
-
-Target.create(browser: 'chrome 66',
-  mobile: 'iphone', laptop: 'true', desktop: 'false', ip: "172.92.12.10",
-  isp: "verizon", city: "Buffalo", country_code: "US", country_name: "United States",
-  district: "Dallas County", timezone_name: "America/Missouri", postal_code: "65622", currency_code: "USD", website_id: 2)
+  Target.create(browser: 'Chrome',
+    mobile: 'null', laptop: 'false', desktop: 'true', ip: "172.92.12.10",
+    isp: "Verizon Communications", city: "Springfield", country_code: "US", country_name: "United States",
+    district: "Dallas County", timezone_name: "America/Missouri", postal_code: "65622", currency_code: "USD", website_id: 1)
